@@ -3,4 +3,5 @@ public class Dyna extends CargoVan{
         super(color, maxSpeed, gearboxType, isMoving);
     }
     //грузовой фургон
+    //    dyna - 20
 }

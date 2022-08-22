@@ -3,4 +3,5 @@ public class Solara extends Cabriolet{
         super(color, maxSpeed, gearboxType, isMoving);
     }
 //    кабриолет
+//    solara - 16
 }

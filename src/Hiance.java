@@ -3,4 +3,5 @@ public class Hiance extends CargoVan{
         super(color, maxSpeed, gearboxType, isMoving);
     }
     //грузовой фургон
+//    hiance - 20
 }

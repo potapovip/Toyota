@@ -3,4 +3,5 @@ public class Camry extends PassengerCar{
         super(color, maxSpeed, gearboxType, isMoving);
     }
 //(легковой авто)
+//    camry - 17
 }
