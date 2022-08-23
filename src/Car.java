@@ -7,12 +7,23 @@ int maxSpeed;
 String gearboxType;
 boolean isMoving;
 double price;
+Electronic electronic;
+Engine engine;
+Lights lights;
+FuelTank fuelTank;
+Wheel [] wheel;
 
-    public Car(String color, int maxSpeed, String gearboxType, boolean isMoving, double price) {
+    public Car(String color, int maxSpeed, String gearboxType, boolean isMoving, Wheel [] wheel, Electronic electronic,
+               Engine engine, Lights lights, FuelTank fuelTank ,double price) {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.gearboxType = gearboxType;
         this.isMoving = isMoving;
+        this.wheel = wheel;
+        this.electronic = electronic;
+        this.engine = engine;
+        this.lights = lights;
+        this.fuelTank = fuelTank;
         this.price = price;
     }
     public void startMoving(){
