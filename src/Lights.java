@@ -1,3 +1,3 @@
-public class Lights {
+public class Lights extends Detail {
     boolean workable;
 }
