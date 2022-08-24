@@ -1,3 +1,5 @@
-public class Lights extends Detail {
-    boolean workable;
+public class Lights extends DetailWithBrokenState {
+    public Lights() {
+        super(false);
+    }
 }

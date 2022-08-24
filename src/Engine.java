@@ -1,3 +1,5 @@
-public class Engine extends Detail{
-boolean workable;
+public class Engine extends DetailWithBrokenState {
+    public Engine() {
+        super(false);
+    }
 }

@@ -1,3 +1,5 @@
-public class Electronic extends Detail {
-    boolean workable;
+public class Electronic extends DetailWithBrokenState {
+    public Electronic() {
+        super(false);
+    }
 }

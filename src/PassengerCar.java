@@ -1,9 +1,13 @@
 public abstract class PassengerCar extends Car{
-    CruiseControl cruiseControl;
-    public PassengerCar(String color, int maxSpeed, String gearboxType, boolean isMoving, Wheel[] wheel,
-                        Electronic electronic, Engine engine, Lights lights, FuelTank fuelTank, double price,CruiseControl cruiseControl) {
-        super(color, maxSpeed, gearboxType, isMoving, wheel, electronic, engine, lights, fuelTank, price);
+    private CruiseControl cruiseControl;
+
+    public PassengerCar(String color, int maxSpeed, GearboxType gearboxType, boolean isMoving, double price,
+                        Wheel[] wheels, Engine engine, Electronic electronic, FuelTank fuelTank, Lights lights,
+                        CruiseControl cruiseControl) {
+        super(color, maxSpeed, gearboxType, isMoving, price, wheels, engine, electronic, fuelTank, lights);
         this.cruiseControl = cruiseControl;
     }
-    // TODO: 23.08.2022 метод включения и выключения круих контроля
+    public void enableCruiseControl(){
+        this.cruiseControl.changeStatus();
+    }
 }
