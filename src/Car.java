@@ -12,9 +12,10 @@ public abstract class Car {
     private Electronic electronic;
     private FuelTank fuelTank;
     private Lights lights;
+    private CarWheelRadius carWheelRadius;
 
     public Car(String color, int maxSpeed, GearboxType gearboxType, boolean isMoving, double price, Wheel[] wheels,
-               Engine engine, Electronic electronic, FuelTank fuelTank, Lights lights) {
+               Engine engine, Electronic electronic, FuelTank fuelTank, Lights lights, CarWheelRadius carWheelRadius) {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.gearboxType = gearboxType;
@@ -25,6 +26,12 @@ public abstract class Car {
         this.electronic = electronic;
         this.fuelTank = fuelTank;
         this.lights = lights;
+        this.carWheelRadius = carWheelRadius
+        for (Wheel wheel : wheels) {
+            if(wheel.getWheelRadius()!=carWheelRadius){
+                throw new RuntimeException("Wrong wheel radius");
+            }
+        }
     }
 
     public void startMoving() throws StartCarException {
