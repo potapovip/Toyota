@@ -1,3 +1,5 @@
+package abstractCars;
+
 public class StartCarException extends Exception{
     public StartCarException() {
     }

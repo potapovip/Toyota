@@ -1,3 +1,5 @@
+package abstractCars;
+
 public class DeviceUsageExeption extends Exception{
     public DeviceUsageExeption() {
     }

@@ -1,4 +1,6 @@
-public class FuelTank extends  Detail{
+package detail;
+
+public class FuelTank extends Detail {
     int fuelQuantity;
 
     public FuelTank() {

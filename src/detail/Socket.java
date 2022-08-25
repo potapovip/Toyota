@@ -1,3 +1,5 @@
+package detail;
+
 public class Socket extends DetailWithBrokenState {
     public Socket() {
         super(false);

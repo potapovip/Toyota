@@ -1,7 +1,10 @@
+package abstractCars;
+
+
+import detail.*;
+
 public abstract class Car {
-    //Для всех машин характерны следующие атрибуты: цвет,
-    // максимальная скорость, тип коробки передач (акпп, механика, робот),
-    // в состоянии движения (да/нет).
+
     private String color;
     private int maxSpeed;
     private GearboxType gearboxType;
@@ -26,7 +29,7 @@ public abstract class Car {
         this.electronic = electronic;
         this.fuelTank = fuelTank;
         this.lights = lights;
-        this.carWheelRadius = carWheelRadius
+        this.carWheelRadius = carWheelRadius;
         for (Wheel wheel : wheels) {
             if(wheel.getWheelRadius()!=carWheelRadius){
                 throw new RuntimeException("Wrong wheel radius");
@@ -38,22 +41,22 @@ public abstract class Car {
 
         if (wheelDiagnictic() && !electronic.isBroken() && !lights.isBroken() && !engine.isBroken() && fuelTank.getFuelQuantity() > 0) {
             this.isMoving = true;
-            System.out.println("Car start moving");
+            System.out.println("abstractCars.Car start moving");
         }
         if (!wheelDiagnictic()) {
-            throw new StartCarException("Car have a problem with wheels");
+            throw new StartCarException("abstractCars.Car have a problem with wheels");
         }
-        if (!lights.isBroken()) {
-            throw new StartCarException("Car have a problem with lights");
+        if (lights.isBroken()) {
+            throw new StartCarException("abstractCars.Car have a problem with lights");
         }
-        if (!engine.isBroken()) {
-            throw new StartCarException("Car have a problem with engine");
+        if (engine.isBroken()) {
+            throw new StartCarException("abstractCars.Car have a problem with engine");
         }
-        if (!electronic.isBroken()) {
-            throw new StartCarException("Car have a problem with electronic");
+        if (electronic.isBroken()) {
+            throw new StartCarException("abstractCars.Car have a problem with electronic");
         }
         if (fuelTank.getFuelQuantity() <= 0) {
-            throw new StartCarException("Car have a problem with fuel");
+            throw new StartCarException("abstractCars.Car have a problem with fuel");
         }
     }
 
@@ -61,7 +64,7 @@ public abstract class Car {
         int countNotBrokenWheels = 0;
         if (wheels.length == 4) {
             for (Wheel wheel : wheels) {
-                if (wheel.isBroken() == false) {
+                if (!wheel.isBroken()) {
                     countNotBrokenWheels++;
                 }
             }
@@ -71,12 +74,12 @@ public abstract class Car {
 
     public void stopMoving() {
         isMoving = false;
-        System.out.println("Car stop moving");
+        System.out.println("abstractCars.Car stop moving");
     }
 
     public void turnOnLights() {
         if (!lights.isBroken()) {
-            System.out.println("Lights is turning on");
+            System.out.println("detail.Lights is turning on");
         }
     }
 

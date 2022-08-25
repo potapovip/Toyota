@@ -1,3 +1,5 @@
+package detail;
+
 public class Refregerator extends DetailWithBrokenState {
     public Refregerator() {
         super(false);

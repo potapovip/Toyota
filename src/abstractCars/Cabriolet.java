@@ -1,4 +1,8 @@
-public abstract class Cabriolet extends Car{
+package abstractCars;
+
+import detail.*;
+
+public abstract class Cabriolet extends Car {
    private ConvertibleRoof convertibleRoof;
 
     public Cabriolet(String color, int maxSpeed, GearboxType gearboxType, boolean isMoving, double price,

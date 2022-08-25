@@ -1,3 +1,5 @@
+package detail;
+
 public class Usb extends DetailWithBrokenState {
     public Usb() {
         super(false);

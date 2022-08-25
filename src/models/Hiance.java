@@ -1,3 +1,8 @@
+package models;
+
+import abstractCars.CargoVan;
+import detail.*;
+
 public class Hiance extends CargoVan {
     private Wheel safeWheel;
 

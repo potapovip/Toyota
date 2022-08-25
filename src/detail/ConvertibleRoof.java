@@ -1,4 +1,6 @@
-public class ConvertibleRoof extends Detail{
+package detail;
+
+public class ConvertibleRoof extends Detail {
     private boolean convertibleRoofStatus;
 
     public ConvertibleRoof() {

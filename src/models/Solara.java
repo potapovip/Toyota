@@ -1,3 +1,9 @@
+package models;
+
+import abstractCars.Cabriolet;
+import abstractCars.DeviceUsageExeption;
+import detail.*;
+
 public class Solara extends Cabriolet {
     private Refregerator refregerator;
 
@@ -12,6 +18,6 @@ public class Solara extends Cabriolet {
     public void coolTheDrink() throws DeviceUsageExeption {
         if (!refregerator.isBroken()) {
             refregerator.turnOnRefregerator();
-        } else throw new DeviceUsageExeption("Refregerator is broken");
+        } else throw new DeviceUsageExeption("detail.Refregerator is broken");
     }
 }

@@ -1,4 +1,6 @@
-public class CruiseControl extends Detail{
+package detail;
+
+public class CruiseControl extends Detail {
     private boolean cruiseControlStatus;
 
     public CruiseControl() {

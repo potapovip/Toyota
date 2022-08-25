@@ -1,4 +1,6 @@
-public abstract class DetailWithBrokenState extends Detail{
+package detail;
+
+public abstract class DetailWithBrokenState extends Detail {
     private boolean isBroken;
 
     public DetailWithBrokenState(boolean isBroken) {

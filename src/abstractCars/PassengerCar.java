@@ -1,3 +1,7 @@
+package abstractCars;
+
+import detail.*;
+
 public abstract class PassengerCar extends Car {
     private CruiseControl cruiseControl;
 

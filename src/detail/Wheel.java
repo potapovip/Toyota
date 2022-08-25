@@ -1,3 +1,5 @@
+package detail;
+
 public class Wheel extends DetailWithBrokenState {
 
 

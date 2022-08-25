@@ -1,3 +1,9 @@
+package models;
+
+import abstractCars.DeviceUsageExeption;
+import abstractCars.PassengerCar;
+import detail.*;
+
 public class Camry extends PassengerCar {
     private Usb usb;
 
@@ -12,7 +18,7 @@ public class Camry extends PassengerCar {
     public void deviceConnect() throws DeviceUsageExeption {
         if (!usb.isBroken()) {
             usb.deviceConnected();
-        } else throw new DeviceUsageExeption("Usb is broken");
+        } else throw new DeviceUsageExeption("detail.Usb is broken");
     }
 
 }

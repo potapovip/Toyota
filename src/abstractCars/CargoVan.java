@@ -1,3 +1,7 @@
+package abstractCars;
+
+import detail.*;
+
 public abstract class CargoVan extends Car {
     private int loadCapacity;
 
