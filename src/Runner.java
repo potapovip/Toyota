@@ -66,7 +66,6 @@ public class Runner {
         Lights lights3 = new Lights();
         Wheel[] wheels3 = createWheels(CarWheelRadius.R20);
         fuelTank2.setFuelQuantity(10);
-        Socket socket1 = new Socket();
         Wheel safeWheel = new Wheel(CarWheelRadius.R20);
         Hiance hiance = new Hiance("White", 120, GearboxType.AUTOMATIC, false, 6_500_000, wheels3, engine3,
                 electronic3, fuelTank3, lights3, CarWheelRadius.R20,300,safeWheel );
