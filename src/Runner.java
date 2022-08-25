@@ -1,9 +1,13 @@
+import abstractCars.DeviceUsageExeption;
 import abstractCars.StartCarException;
 import detail.*;
 import models.Camry;
+import models.Dyna;
+import models.Hiance;
+import models.Solara;
 
 public class Runner {
-    public static void main(String[] args) throws StartCarException {
+    public static void main(String[] args) throws StartCarException, DeviceUsageExeption {
         Engine engine = new Engine();
         FuelTank fuelTank = new FuelTank();
         Electronic electronic = new Electronic();
@@ -14,12 +18,63 @@ public class Runner {
         fuelTank.setFuelQuantity(10);
 
         Camry camry1 = new Camry("Silver", 160, GearboxType.ROBOT, false, 3_200_000, wheels, engine, electronic,
-                fuelTank, lights, CarWheelRadius.R17,cruiseControl,usb);
+                fuelTank, lights, CarWheelRadius.R17, cruiseControl, usb);
         camry1.turnOnLights();
         camry1.startMoving();
         camry1.stopMoving();
         camry1.enableCruiseControl();
         camry1.enableCruiseControl();
+        System.out.println("-----------------------");
+
+        Engine engine1 = new Engine();
+        FuelTank fuelTank1 = new FuelTank();
+        Electronic electronic1 = new Electronic();
+        Lights lights1 = new Lights();
+        Wheel[] wheels1 = createWheels(CarWheelRadius.R16);
+        Refregerator refregerator = new Refregerator();
+        ConvertibleRoof convertibleRoof = new ConvertibleRoof();
+        fuelTank1.setFuelQuantity(10);
+
+        Solara solara = new Solara("black", 150, GearboxType.MECHANICAL, false, 3_000_000, wheels1, engine1,
+                electronic1, fuelTank1, lights1, CarWheelRadius.R16, convertibleRoof, refregerator);
+        solara.startMoving();
+        solara.stopMoving();
+        solara.coolTheDrink();
+        solara.openRoof();
+        solara.openRoof();
+        System.out.println("-----------------------");
+
+        Engine engine2 = new Engine();
+        FuelTank fuelTank2 = new FuelTank();
+        Electronic electronic2 = new Electronic();
+        Lights lights2 = new Lights();
+        Wheel[] wheels2 = createWheels(CarWheelRadius.R20);
+        fuelTank2.setFuelQuantity(10);
+        Socket socket = new Socket();
+        Dyna dyna = new Dyna("Grey", 100, GearboxType.MECHANICAL, false, 5_000_000, wheels2, engine2, electronic2,
+                fuelTank2, lights2, CarWheelRadius.R20, 200, socket);
+        dyna.startMoving();
+        dyna.stopMoving();
+        dyna.chargePhone();
+        dyna.turnOnLights();
+
+        System.out.println("-----------------------");
+
+        Engine engine3 = new Engine();
+        FuelTank fuelTank3 = new FuelTank();
+        Electronic electronic3 = new Electronic();
+        Lights lights3 = new Lights();
+        Wheel[] wheels3 = createWheels(CarWheelRadius.R20);
+        fuelTank2.setFuelQuantity(10);
+        Socket socket1 = new Socket();
+        Wheel safeWheel = new Wheel(CarWheelRadius.R20);
+        Hiance hiance = new Hiance("White", 120, GearboxType.AUTOMATIC, false, 6_500_000, wheels3, engine3,
+                electronic3, fuelTank3, lights3, CarWheelRadius.R20,300,safeWheel );
+        dyna.startMoving();
+        dyna.stopMoving();
+        dyna.chargePhone();
+        dyna.turnOnLights();
+
 
     }
 
@@ -27,8 +82,9 @@ public class Runner {
     public static Wheel[] createWheels(CarWheelRadius carWheelRadius) {
         Wheel[] wheels = new Wheel[4];
         for (int i = 0; i < wheels.length; i++) {
-            wheels[i] = new Wheel(CarWheelRadius.R17);
+            wheels[i] = new Wheel(carWheelRadius);
         }
         return wheels;
     }
+
 }
