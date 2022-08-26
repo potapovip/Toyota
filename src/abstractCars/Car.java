@@ -78,5 +78,7 @@ public abstract class Car {
             System.out.println("Lights is turning on");
         }
     }
-
+    public void  refuel(int fuelQuantity){
+         fuelTank.setFuelQuantity(fuelQuantity);
+    }
 }

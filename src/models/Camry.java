@@ -21,7 +21,6 @@ public class Camry extends PassengerCar {
     }
 
 
-
     public void deviceConnect() throws DeviceUsageExeption {
         if (!usb.isBroken()) {
             usb.deviceConnected();
