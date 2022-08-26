@@ -3,17 +3,15 @@ package abstractCars;
 import detail.*;
 
 public abstract class Cabriolet extends Car {
-   private ConvertibleRoof convertibleRoof;
+    private ConvertibleRoof convertibleRoof;
 
-    public Cabriolet(String color, int maxSpeed, GearboxType gearboxType, boolean isMoving, double price,
-                     Wheel[] wheels, Engine engine, Electronic electronic, FuelTank fuelTank, Lights lights,
-                     CarWheelRadius carWheelRadius, ConvertibleRoof convertibleRoof) {
-        super(color, maxSpeed, gearboxType, isMoving, price, wheels, engine, electronic, fuelTank, lights,
-                carWheelRadius);
+    public Cabriolet(String color, int maxSpeed, GearboxType gearboxType, double price, Wheel[] wheels, Engine engine
+            , Electronic electronic, FuelTank fuelTank, Lights lights, ConvertibleRoof convertibleRoof) {
+        super(color, maxSpeed, gearboxType, price, wheels, engine, electronic, fuelTank, lights);
         this.convertibleRoof = convertibleRoof;
     }
 
-    public void openRoof(){
+    public void openRoof() {
         this.convertibleRoof.changeRoofStatus();
     }
 }

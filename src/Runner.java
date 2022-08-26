@@ -17,8 +17,8 @@ public class Runner {
         Usb usb = new Usb();
         fuelTank.setFuelQuantity(10);
 
-        Camry camry1 = new Camry("Silver", 160, GearboxType.ROBOT, false, 3_200_000, wheels, engine, electronic,
-                fuelTank, lights, CarWheelRadius.R17, cruiseControl, usb);
+        Camry camry1 = new Camry("Silver", 160, GearboxType.ROBOT, 3_200_000, wheels, engine, electronic,
+                fuelTank, lights,  cruiseControl, usb);
         camry1.turnOnLights();
         camry1.startMoving();
         camry1.stopMoving();
@@ -35,8 +35,8 @@ public class Runner {
         ConvertibleRoof convertibleRoof = new ConvertibleRoof();
         fuelTank1.setFuelQuantity(10);
 
-        Solara solara = new Solara("black", 150, GearboxType.MECHANICAL, false, 3_000_000, wheels1, engine1,
-                electronic1, fuelTank1, lights1, CarWheelRadius.R16, convertibleRoof, refregerator);
+        Solara solara = new Solara("black", 150, GearboxType.MECHANICAL,  3_000_000, wheels1, engine1,
+                electronic1, fuelTank1, lights1,  convertibleRoof, refregerator);
         solara.startMoving();
         solara.stopMoving();
         solara.coolTheDrink();
@@ -51,8 +51,8 @@ public class Runner {
         Wheel[] wheels2 = createWheels(CarWheelRadius.R20);
         fuelTank2.setFuelQuantity(10);
         Socket socket = new Socket();
-        Dyna dyna = new Dyna("Grey", 100, GearboxType.MECHANICAL, false, 5_000_000, wheels2, engine2, electronic2,
-                fuelTank2, lights2, CarWheelRadius.R20, 200, socket);
+        Dyna dyna = new Dyna("Grey", 100, GearboxType.MECHANICAL,  5_000_000, wheels2, engine2, electronic2,
+                fuelTank2, lights2,  200, socket);
         dyna.startMoving();
         dyna.stopMoving();
         dyna.chargePhone();
@@ -67,8 +67,8 @@ public class Runner {
         Wheel[] wheels3 = createWheels(CarWheelRadius.R20);
         fuelTank2.setFuelQuantity(10);
         Wheel safeWheel = new Wheel(CarWheelRadius.R20);
-        Hiance hiance = new Hiance("White", 120, GearboxType.AUTOMATIC, false, 6_500_000, wheels3, engine3,
-                electronic3, fuelTank3, lights3, CarWheelRadius.R20,300,safeWheel );
+        Hiance hiance = new Hiance("White", 120, GearboxType.AUTOMATIC,  6_500_000, wheels3, engine3,
+                electronic3, fuelTank3, lights3,300,safeWheel );
         dyna.startMoving();
         dyna.stopMoving();
         dyna.chargePhone();
