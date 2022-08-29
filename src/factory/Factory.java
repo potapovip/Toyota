@@ -5,10 +5,14 @@ import detail.*;
 public class Factory {
     private Countries countries;
 
+
     public Factory(Countries countries) {
         this.countries = countries;
     }
 
+    public Countries getCountries() {
+        return countries;
+    }
 
     public static Engine createEngine() {
         return new Engine();

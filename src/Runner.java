@@ -11,7 +11,7 @@ import models.Hiance;
 import models.Solara;
 
 public class Runner {
-    public static void main(String[] args) throws StartCarException, DeviceUsageExeption {
+    public static void main(String[] args) throws StartCarException, DeviceUsageExeption, CountyFactoryNotEqualException {
         Engine engine = new Engine();
         FuelTank fuelTank = new FuelTank();
         Electronic electronic = new Electronic();
@@ -80,7 +80,7 @@ public class Runner {
 
         System.out.println("+++++++++++++++++++++++++++++++++");
         Factory factory = new Factory(Countries.USA);
-        Conveyor conveyor = new Conveyor(Countries.USA);
+        Conveyor conveyor = new Conveyor(Countries.USA,factory);
         Camry camry = conveyor.createCamry("Black", 1_500_000);
         camry.enableCruiseControl();
         camry.refuel(10);
